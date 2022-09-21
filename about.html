@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="app.js" />
+    <title>Pema's Portfolio</title>
+  </head>
+  <body>
+    <section class="nav-wrapper">
+      <nav>
+        <a class="logo" href="/index.html">Portfolio</a>
+        <div class="nav-links" id="navBar">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul role="list">
+            <li>
+              <a
+                href="/index.html"
+                aria-current="page"
+                class="nav-link w--current"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/about.html"
+                aria-current="page"
+                class="nav-link w--current"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/works.html"
+                aria-current="page"
+                class="nav-link w--current"
+                >Works</a
+              >
+            </li>
+            <li>
+              <a href="#footer" aria-current="page" class="nav-link w--current"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+    </section>
+    <section class="about-page">
+      <div class="about-page-container">
+        <div class="about-page-text">
+          <div class="flip">
+            <h1>
+              <span style="--i: 1">M</span>
+              <span style="--i: 2">y</span> &nbsp;
+              <span style="--i: 3">S</span>
+              <span style="--i: 4">t</span>
+              <span style="--i: 5">o</span>
+              <span style="--i: 6">r</span>
+              <span style="--i: 7">y</span>
+            </h1>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+            vivamus risus posuere vitae vivamus. Enim dui nibh magna hac id
+            lacus euismod mi diam. Consequat elementum tincidunt egestas egestas
+            orci. At facilisi ultrices tortor, volutpat varius sit vitae
+            rhoncus. Ut nisi, feugiat leo aenean massa enim.
+          </p>
+          <h3>Designing and developing since 25 years old</h3>
+          <p>
+            At facilisi ultrices tortor, volutpat varius sit vitae rhoncus. Ut
+            nisi, feugiat leo aenean massa enim. Sed accumsan, ac dictum tempus
+            luctus id in porttitor dictum.
+          </p>
+          <ul>
+            <li>
+              <p>
+                Ornare lectus sit amet est placerat in egestas erat imperdiet.
+              </p>
+            </li>
+            <li>
+              <p>
+                Ornare lectus sit amet est placerat in egestas erat imperdiet.
+              </p>
+            </li>
+            <li>
+              <p>
+                Ornare lectus sit amet est placerat in egestas erat imperdiet.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="about_page_image" class="about-page-image">
+          <img src="/images/about-page-image-one.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="skills reveal">
+      <h1>My Skills</h1>
+      <div class="skills-content reveal">
+        <div class="html">
+          <img src="/images/html-5.png" alt="" />
+          <h3>HTML5</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+            vivamus risus posuere vitae vivamus. Enim dui nibh magna hac id
+            lacus euismod mi diam.
+          </p>
+        </div>
+        <div class="css">
+          <img src="/images/css-3.png" alt="" />
+          <h3>CSS3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+            vivamus risus posuere vitae vivamus. Enim dui nibh magna hac id
+            lacus euismod mi diam.
+          </p>
+        </div>
+        <div class="js">
+          <img src="/images/js.png" alt="" />
+          <h3>JavaScript</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+            vivamus risus posuere vitae vivamus. Enim dui nibh magna hac id
+            lacus euismod mi diam.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="footer" class="footer reveal">
+      <div class="footer-content">
+        <div class="f-first reveal">
+          <h3>LET'S STAY IN TOUCH</h3>
+          <form action="" method="post">
+            <input type="text" placeholder="Enter Full Name" required />
+            <input type="email" placeholder="Enter Email" required />
+            <input type="text" placeholder="Enter Subject" required />
+            <textarea rows="8" placeholder="Message" required></textarea>
+            <button type="submit" class="hero-btn">To Infinity & Beyond</button>
+          </form>
+        </div>
+        <div class="f-second reveal">
+          <div class="apps">
+            <h3>DOWNLOAD MY APP ON</h3>
+            <a href="https://apple.com"
+              ><img src="/images/app-store.png" alt="App Store"
+            /></a>
+            <a href="https://play.google.com"
+              ><img src="/images/google-play.png" alt="Google Play"
+            /></a>
+          </div>
+          <div class="social">
+            <h3>FOLLOW ME ON</h3>
+            <a href="https://facebook.com"
+              ><img src="/images/64 facebook.png" alt="facebook"
+            /></a>
+            <a href="https://instagram.com"
+              ><img src="/images/64 instagram.png" alt="instagram"
+            /></a>
+            <a href="https://twitter.com"
+              ><img src="/images/64 twitter.png" alt="twitter"
+            /></a>
+            <a href="https://youtube.com"
+              ><img src="/images/64 youtube.png" alt="youtube"
+            /></a>
+            <p>Copyright &copy; 2022. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let modal = document.getElementById("pop_up");
+      let btn = document.getElementById("demo_btn");
+      let span = document.getElementsByClassName("close")[0];
+      btn.onclick = function () {
+        modal.style.display = "block";
+        modal.classList.toggle("active");
+      };
+      span.onclick = function () {
+        modal.classList.remove("active");
+      };
+      /*--------NavBar Menu---------*/
+      let navbar = document.getElementById("navBar");
+      function showMenu() {
+        navbar.style.right = "-120px";
+      }
+      function hideMenu() {
+        navbar.style.right = "-520px";
+      }
+      /*---------------Reveal Sections--------------*/
+
+      window.addEventListener("scroll", reveal);
+      function reveal() {
+        let reveals = document.querySelectorAll(".reveal");
+
+        for (let i = 0; i < reveals.length; i++) {
+          let windowheight = window.innerHeight;
+          let revealtop = reveals[i].getBoundingClientRect().top;
+          let revealpoint = 150;
+
+          if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
