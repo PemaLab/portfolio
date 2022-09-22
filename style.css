@@ -287,7 +287,7 @@ nav .fa-solid {
   position: relative;
 }
 .works-content img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .works-content a {
   display: inline-block;
@@ -302,9 +302,9 @@ nav .fa-solid {
   text-decoration: none;
   z-index: 4;
   position: relative;
+  transition: 1s;
 }
 .works-content a:hover {
-  transition: 0.5s;
   color: black;
   background: transparent;
 }
@@ -319,11 +319,14 @@ nav .fa-solid {
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
+  opacity: 0;
   z-index: 5;
 }
 .popup-video video {
   position: relative;
   width: 900px;
+  left: 5%;
 }
 .popup-video.active {
   visibility: visible;
@@ -331,10 +334,10 @@ nav .fa-solid {
 }
 .close {
   position: absolute;
-  top: -100px;
-  right: 30px;
+  top: -200px;
+  right: -30px;
   cursor: pointer;
-  max-width: 32px;
+  max-width: 50px;
   z-index: 100;
 }
 .reveal {
@@ -423,8 +426,7 @@ nav .fa-solid {
   display: inline-block;
   width: 50px;
   height: 50px;
-  margin-left: 20px;
-  padding: 0 10px;
+  margin-left: 40px;
   text-decoration: none;
   text-align: center;
   font-size: 15px;
@@ -451,14 +453,14 @@ nav .fa-solid {
 .social a {
   display: inline-block;
   width: 35px;
-  height: 30px;
+  height: 35px;
   margin: 0 10px;
   transition: transform 0.5s ease-in;
 }
 .social img {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
 }
 
@@ -467,7 +469,7 @@ nav .fa-solid {
 /*--------Ipad Air-----------*/
 @media screen and (max-width: 1030px) {
   .nav-wrapper {
-    margin: 0 0 0 0;
+    margin: 0;
   }
   .nav-links ul li a {
     font-size: 20px;
@@ -601,11 +603,11 @@ nav .fa-solid {
   .works-content {
     width: 100%;
   }
-  .about {
-    margin-top: -10px;
-  }
 }
 @media screen and (max-width: 700px) {
+  .nav-wrapper {
+    margin: 0;
+  }
   .nav-links ul li {
     display: block;
   }
@@ -627,9 +629,11 @@ nav .fa-solid {
     cursor: pointer;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
   .nav-wrapper {
-    margin: 0 0 0 0;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky;
   }
   nav {
     padding: -40px;
@@ -650,8 +654,9 @@ nav .fa-solid {
     background: #4aead8;
     border-bottom-left-radius: 2em;
     height: auto;
-    width: 280px;
+    width: 220px;
     top: 0;
+    padding-top: 10px;
     text-align: left;
     transition: 1s;
   }
@@ -661,6 +666,9 @@ nav .fa-solid {
     margin-right: 40px;
     font-size: 20px;
     cursor: pointer;
+  }
+  nav .fa-xmark {
+    margin-left: 10px;
   }
   .intro-wrapper {
     width: 100%;
@@ -675,6 +683,8 @@ nav .fa-solid {
     width: 90%;
     text-align: center;
     margin-left: 20px;
+    padding-top: 5%;
+    padding-bottom: 10%;
   }
   .intro-word h1 {
     font-size: 20px;
@@ -704,11 +714,12 @@ nav .fa-solid {
   .about-image img {
     width: 70%;
     margin-left: 5px;
+    margin-top: 20px;
   }
   .about-text {
     text-align: center;
-    margin: 0 0 20px 20px;
-    padding: 0;
+    margin: 0 0 0 20px;
+    padding-bottom: 20px;
   }
   .about-text h1 {
     font-size: 30px;
@@ -861,6 +872,12 @@ nav .fa-solid {
   margin-bottom: 10%;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
+}
+.skills img {
+  transition: 0.5s ease-in-out;
+}
+.skills img:hover {
+  transform: scale(1.1);
 }
 .skills h1 {
   padding-bottom: 10px;

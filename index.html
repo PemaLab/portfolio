@@ -39,10 +39,7 @@
                 <div class="intro-image">
                     <img src="/images/introimage.png" alt="portfolio">
                 </div>
-            </div>
-            <div id="demo" class="spotlight">
-
-            </div>      
+            </div>     
         <div>
     </section>
     <section id="about" class="about">
@@ -76,17 +73,29 @@
             <div class="works-content-two">
                 <img src="/images/all in one.webp" alt="phonecollection">
                 <a href="" class="codebtn">Code</a>
-                <a href="" class="demobtn">Demo</a>
+                <a href="#pop_up_two" onclick="toggle();" class="demobtn">Demo</a>
+            </div>
+            <div class="popup-video" id="pop_up_two">
+                <video src="" controls="true"></video>
+                <img class="close" onclick="toggle();" src="/images/cross.png" alt="">
             </div>
             <div class="works-content-three">
                 <img src="/images/all in one.webp" alt="phonecollection">
                 <a href="" class="codebtn">Code</a>
-                <a href="" class="demobtn">Demo</a>
+                <a href="#pop_up_three" onclick="toggle();" class="demobtn">Demo</a>
+            </div>
+            <div class="popup-video" id="pop_up_three">
+                <video src="" controls="true"></video>
+                <img class="close" onclick="toggle();" src="/images/cross.png" alt="">
             </div>
             <div class="works-content-four">
                 <img src="/images/all in one.webp" alt="phonecollection">
                 <a href="" class="codebtn">Code</a>
-                <a href="" class="demobtn">Demo</a>
+                <a href="#pop_up_four" onclick="toggle();" class="demobtn">Demo</a>
+            </div>
+            <div class="popup-video" id="pop_up_four">
+                <video src="" controls="true"></video>
+                <img class="close" onclick="toggle();" src="/images/cross.png" alt="">
             </div>
             <div class="works-background">
             </div> 
@@ -153,10 +162,6 @@
         function toggle(){
             let popup = document.querySelector(".popup-video")
             popup.classList.toggle("active")
-            let video = document.querySelector("video")
-            video.classList.toggle("active");
-            video.pause();
-            video.currentTime = 0;
         }       
     </script>
 </body>
