@@ -726,6 +726,33 @@ nav .fa-solid {
     cursor: pointer;
   }
 }
+@media screen and (max-width: 500px) {
+  .nav-wrapper {
+    width: 100%;
+  }
+  .intro-word a {
+    margin-left: -10px;
+  }
+  .intro-image img {
+    margin-left: -130px;
+  }
+  .about-content {
+    margin-top: 10%;
+  }
+  .about-image img {
+    margin-bottom: 5%;
+    margin-left: 4%;
+  }
+  .about-text a {
+    margin-left: -10px;
+  }
+  .works-content {
+    width: 85%;
+  }
+  .f-first,
+  .f-second {
+    margin-left: 10%;
+  }
 @media screen and (max-width: 375px) {
   .nav-wrapper {
     width: 100%;
