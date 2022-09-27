@@ -556,6 +556,111 @@ nav .fa-solid {
 .skills-content h3 {
   margin-bottom: 10px;
 }
+.works-page {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.projects-heading span {
+  display: block;
+  font-size: 30px;
+  margin-top: 100px;
+  text-align: center;
+}
+.projects-heading span::after {
+  display: block;
+  content: "";
+  position: relative;
+  width: 1px;
+  height: 250px;
+  margin: 25px auto;
+  background-color: #9e9d9d;
+}
+.projects-list {
+  display: block;
+  margin-top: -25px;
+}
+.projects-one {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.projects-one-text::after {
+  display: block;
+  content: "";
+  position: relative;
+  width: 1px;
+  height: 250px;
+  left: 50%;
+  background-color: #9e9d9d;
+}
+.projects-one a {
+  position: absolute;
+  width: 45%;
+  left: 50%;
+  margin-top: -100px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+.projects-one img {
+  width: 100%;
+}
+.projects-one-text {
+  text-align: center;
+  position: relative;
+  left: 90%;
+  width: fit-content;
+  z-index: 2;
+}
+.projects-one-text h3,
+.projects-one-text h1 {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  font-family: "Sans-serif";
+  font-style: italic;
+  font-weight: 100;
+}
+.projects-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.projects-two-text::after {
+  display: block;
+  content: "";
+  position: relative;
+  width: 1px;
+  height: 250px;
+  left: 50%;
+  background-color: #9e9d9d;
+  transform-origin: 50% 50%;
+  transform: scale(1);
+}
+.projects-two a {
+  width: 100%;
+  margin-top: -100px;
+  cursor: pointer;
+}
+.projects-two img {
+  position: absolute;
+  width: 45%;
+  left: 0;
+}
+.projects-two-text {
+  position: relative;
+  right: 10%;
+  width: fit-content;
+  z-index: 2;
+}
+.projects-two-text h3,
+.projects-two-text h1 {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  font-family: "Sans-serif";
+  font-style: italic;
+  font-weight: 100;
+}
 
 /*--------------Media Query----------------*/
 
