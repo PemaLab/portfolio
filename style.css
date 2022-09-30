@@ -184,6 +184,7 @@ nav .fa-solid {
   padding-top: 5%;
   padding-bottom: 0.1px;
   background-color: hsla(230, 40%, 50%, 1);
+  padding-bottom: 5%;
 }
 .works-background {
   width: 60%;
@@ -248,7 +249,6 @@ nav .fa-solid {
   height: auto;
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-bottom: 10%;
 }
 .works-content-one,
 .works-content-two,
@@ -303,13 +303,13 @@ nav .fa-solid {
   text-decoration: none;
   z-index: 4;
   position: relative;
-  transition: 1s;
+  transition: 0.8s;
 }
 .works-content a:hover {
   color: black;
   background: transparent;
 }
-.works-content .popup-video {
+.works-content > .popup-video {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -471,12 +471,12 @@ nav .fa-solid {
   margin: 0;
 }
 .about-page-container {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: grid;
   gap: 5%;
   grid-template-columns: 1fr 1fr;
-  margin: 80px 0 0 50px;
+  padding: 5% 5% 0 5%;
 }
 .about-page-text {
   line-height: 30px;
@@ -515,6 +515,11 @@ nav .fa-solid {
   font-size: 18px;
   color: rgb(124, 124, 124);
 }
+.about-page-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .about-page-image img {
   width: 100%;
   height: auto;
@@ -542,12 +547,11 @@ nav .fa-solid {
   border-bottom: 2px solid #4aead8;
 }
 .skills-content {
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3%;
   margin-top: 50px;
-  margin-left: 55px;
 }
 .skills-content img {
   width: 30%;
@@ -556,9 +560,13 @@ nav .fa-solid {
 .skills-content h3 {
   margin-bottom: 10px;
 }
+.html p,
+.css p,
+.js p {
+  padding: 5px 30px;
+}
 .works-page {
   width: 100%;
-  padding-bottom: 50px;
 }
 .projects-heading span {
   display: block;
@@ -572,45 +580,86 @@ nav .fa-solid {
   content: "";
   position: relative;
   width: 1px;
-  height: 270px;
-  margin: 15px auto 35px auto;
+  height: 100px;
+  margin: 15px auto auto auto;
   background-color: #c5c5c5;
 }
 .projects-list {
   display: block;
-  margin-top: -25px;
 }
-.projects-one a {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 55%;
+.projects-one {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  margin-left: 43.45%;
 }
-.projects-one img {
+.projects-one-text {
+  display: inline-block;
   width: 100%;
 }
-.projects-two a {
-  width: 45%;
+.projects-one-img {
+  width: 100%;
   display: flex;
-  position: absolute;
-  top: 115%;
+  justify-content: center;
+  align-items: center;
 }
-.projects-two img {
+.projects-one-img img {
   width: 100%;
 }
-.projects-three a {
-  display: flex;
-  position: absolute;
-  top: 180%;
-  left: 55%;
+.projects-two {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  margin-right: 43.5%;
 }
-.projects-three img {
+.projects-two-text {
+  display: inline-block;
   width: 100%;
 }
+.projects-two-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-two-img img {
+  width: 100%;
+}
+.projects-three {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  margin-left: 43.45%;
+}
+.projects-three-text {
+  display: inline-block;
+  width: 100%;
+}
+.projects-three-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-three-img img {
+  width: 100%;
+}
+.projects-one a,
 .projects-one img,
+.projects-two a,
 .projects-two img,
+.projects-three a,
 .projects-three img {
   border-radius: 50px;
+  cursor: pointer;
+}
+.projects-one-text::before,
+.projects-two-text::before,
+.projects-three-text::before {
+  display: block;
+  content: "";
+  position: relative;
+  width: 1px;
+  height: 200px;
+  left: 50%;
+  background-color: #c5c5c5;
 }
 .projects-one-text::after,
 .projects-two-text::after,
@@ -619,15 +668,9 @@ nav .fa-solid {
   content: "";
   position: relative;
   width: 1px;
-  height: 330px;
+  height: 200px;
   left: 50%;
   background-color: #c5c5c5;
-}
-.projects-one-text,
-.projects-two-text,
-.projects-three-text {
-  text-align: center;
-  left: 100%;
 }
 .projects-one-text h3,
 .projects-two-text h3,
@@ -856,7 +899,7 @@ nav .fa-solid {
   .works-content-three,
   .works-content-four {
     width: 80%;
-    left: 5%;
+    left: 10%;
   }
   .works-content img {
     width: 80%;
@@ -912,8 +955,8 @@ nav .fa-solid {
     margin-left: -95px;
   }
   .works-content {
-    width: 90%;
-    margin-left: 40px;
+    width: 100%;
+    left: -5%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -940,6 +983,32 @@ nav .fa-solid {
     font-size: 20px;
     cursor: pointer;
   }
+  .about-page {
+    width: 100%;
+  }
+  .about-page-container {
+    display: block;
+    width: 100%;
+  }
+  .about-page-text ul li {
+    margin-left: 30px;
+  }
+  .about-page-image {
+    margin: 50px 0 0 -20px;
+  }
+  .skills-content {
+    display: block;
+  }
+  .html,
+  .css,
+  .js {
+    margin-bottom: 50px;
+  }
+  .html img,
+  .css img,
+  .js img {
+    width: 20%;
+  }
 }
 @media screen and (max-width: 500px) {
   .nav-wrapper {
@@ -962,7 +1031,14 @@ nav .fa-solid {
     margin-left: -10px;
   }
   .works-content {
-    width: 85%;
+    width: 90%;
+  }
+  .works-content-one,
+  .works-content-two,
+  .works-content-three,
+  .works-content-four {
+    width: 100%;
+    left: 6%;
   }
   .f-first,
   .f-second {
@@ -1115,7 +1191,7 @@ nav .fa-solid {
   .works-content-three,
   .works-content-four {
     width: 100%;
-    margin: 0 0 20px -10px;
+    margin: 0 0 20px 0;
   }
   .works-content img {
     width: 100%;
@@ -1159,8 +1235,7 @@ nav .fa-solid {
     padding-bottom: 30px;
   }
   .about-page {
-    width: 80%;
-    display: block;
+    width: 100%;
     margin: 0;
   }
   .about-page-container {
@@ -1180,9 +1255,9 @@ nav .fa-solid {
   .about-page ul li p {
     margin-left: -10px;
   }
-  .about-page-image {
+  .about-page-image img {
     width: 100%;
-    margin-left: -15px;
+    margin-left: 20px;
   }
   .skills {
     width: 100%;
@@ -1191,11 +1266,16 @@ nav .fa-solid {
   }
   .skills-content {
     display: block;
-    width: 70%;
+    width: 100%;
   }
   .html,
   .css,
   .js {
     margin-bottom: 30px;
+  }
+  .html p,
+  .css p,
+  .js p {
+    padding: 5px 30px;
   }
 }
