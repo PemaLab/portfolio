@@ -132,38 +132,6 @@
         </div>
     </section>
     
-    <script>
-        /*--------NavBar Menu---------*/
-        let navbar = document.getElementById("navBar");
-        function showMenu() {
-            navbar.style.right = "-120px";
-        }
-        function hideMenu() {
-            navbar.style.right = "-320px"
-        }
-        /*---------------Reveal Sections--------------*/
-
-        window.addEventListener('scroll', reveal);
-        function reveal (){
-            let reveals = document.querySelectorAll('.reveal');
-
-            for (let i = 0; i < reveals.length; i++){
-                let windowheight = window.innerHeight;
-                let revealtop = reveals[i].getBoundingClientRect().top;
-                let revealpoint = 150;
-
-                if(revealtop < windowheight - revealpoint){
-                    reveals[i].classList.add('active');
-                }
-                else{
-                    reveals[i].classList.remove('active');
-                }
-            }
-        }
-        function toggle(){
-            let popup = document.querySelector(".popup-video")
-            popup.classList.toggle("active")
-        }      
-    </script>
+    <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
