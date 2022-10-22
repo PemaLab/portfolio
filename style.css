@@ -1075,13 +1075,13 @@ nav ul li {
   }
   .about-page-container {
     display: block;
-    width: 100%;
+    width: 90%;
   }
   .about-page-text ul li {
     margin-left: 30px;
   }
   .about-page-image {
-    margin: 50px 0 0 -20px;
+    margin: 50px 0 0 -5px;
   }
   .skills-content {
     display: block;
@@ -1366,8 +1366,8 @@ nav ul li {
     margin-left: -10px;
   }
   .about-page-image img {
-    width: 100%;
-    margin-left: 20px;
+    width: 90%;
+    margin-left: 10px;
   }
   .skills {
     width: 100%;
