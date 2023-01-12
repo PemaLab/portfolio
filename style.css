@@ -1182,13 +1182,13 @@ nav {
   }
   .about-page-container {
     display: block;
-    width: 90%;
+    width: 100%;
   }
   .about-page-text ul li {
     margin-left: 30px;
   }
   .about-page-image {
-    margin: 50px 0 0 -5px;
+    margin: 50px 0 0 0;
   }
   .works-content {
     display: block;
