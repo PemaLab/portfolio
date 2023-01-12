@@ -1,17 +1,9 @@
 /*--------NavBar Menu---------*/
-let menu = document.querySelector(".menu");
-let navMenu = document.querySelector(".nav-menu");
-
-menu.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    navMenu.classList.toggle("active");
-})
-document.querySelectorAll(".nav-link").forEach(n => n.
-addEventListener("click", () => {
-    menu.classList.remove("active");
-    navMenu.classList.remove("active");
-}))
-
+let navigation = document.querySelector(".navigation");
+document.querySelector(".toggle").onclick = function () {
+  this.classList.toggle("active");
+  navigation.classList.toggle("active");
+};
 /*---------------Reveal Sections--------------*/
 window.addEventListener('scroll', reveal);
 function reveal (){
