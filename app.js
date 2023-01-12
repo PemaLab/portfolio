@@ -1,3 +1,5 @@
+import smoothscroll from "smoothscroll-polyfill";
+smoothscroll.polyfill();
 /*--------NavBar Menu---------*/
 let navigation = document.querySelector(".navigation");
 document.querySelector(".toggle").onclick = function () {
