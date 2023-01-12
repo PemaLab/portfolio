@@ -1318,11 +1318,27 @@ nav {
 }
 @media screen and (max-width: 414px) {
   .intro-image {
-    width: 70%;
+    width: 80%;
+    margin-top: 40px;
   }
   .intro-image img {
     width: 100%;
     margin: auto;
+  }
+  .about-image img {
+    width: 60%;
+  }
+  .about-text {
+    padding-top: 0;
+  }
+  .about-text p {
+    margin: 0;
+  }
+  .works {
+    padding-top: 10%;
+  }
+  .works-top {
+    padding-bottom: 30px;
   }
   .works-content-one,
   .works-content-two,
