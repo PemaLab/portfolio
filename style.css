@@ -490,12 +490,12 @@ nav {
   margin: 0;
 }
 .about-page-container {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: grid;
   gap: 5%;
   grid-template-columns: 1fr 1fr;
-  padding: 5% 5% 0 5%;
+  padding: 5% 5%;
 }
 .about-page-text {
   line-height: 30px;
@@ -564,7 +564,6 @@ nav {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  margin: -20px 0 0 0;
   vertical-align: middle;
 }
 .skills {
@@ -1005,6 +1004,16 @@ nav {
   .projects-four {
     margin-right: 43.55%;
   }
+  .about-page-text h1,
+  .about-page-text h3 {
+    margin: 30px 0;
+  }
+  .about-page-text h1 span {
+    font-size: 30px;
+  }
+  .about-page-text p {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 820px) {
   .intro-word {
@@ -1048,6 +1057,17 @@ nav {
   .projects-two,
   .projects-four {
     margin-right: 43.55%;
+  }
+  .about-page-text h1,
+  .about-page-text h3 {
+    font-size: 25px;
+    margin: 30px 0;
+  }
+  .about-page-text h1 span {
+    font-size: 30px;
+  }
+  .about-page-text p {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -1255,29 +1275,6 @@ nav {
   .projects-four {
     margin-right: 43.6%;
   }
-}
-@media screen and (max-width: 500px) {
-  .intro-word h3 {
-    font-size: 20px;
-  }
-  .intro-word h1 {
-    font-size: 25px;
-  }
-  .about-content {
-    margin-top: 10%;
-  }
-  .about-image img {
-    width: 70%;
-    margin-bottom: 5%;
-  }
-  .about-text a {
-    margin-left: -10px;
-  }
-
-  .f-first,
-  .f-second {
-    margin-left: 10%;
-  }
   .works-page {
     padding-bottom: 5%;
   }
@@ -1314,6 +1311,29 @@ nav {
   .f-first input,
   .f-first textarea {
     width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro-word h3 {
+    font-size: 20px;
+  }
+  .intro-word h1 {
+    font-size: 25px;
+  }
+  .about-content {
+    margin-top: 10%;
+  }
+  .about-image img {
+    width: 70%;
+    margin-bottom: 5%;
+  }
+  .about-text a {
+    margin-left: -10px;
+  }
+
+  .f-first,
+  .f-second {
+    margin-left: 10%;
   }
 }
 @media screen and (max-width: 414px) {
