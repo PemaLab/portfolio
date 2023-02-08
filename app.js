@@ -50,5 +50,4 @@ emailjs.sendForm(serviceID, templateID, this)
     btn.value = 'Send Email';
     alert(JSON.stringify(err));
     });
-    (reset()); return false;
 });
