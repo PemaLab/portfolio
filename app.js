@@ -1,5 +1,3 @@
-const { Form } = require("react-bootstrap");
-
 /*--------NavBar Menu---------*/
 let navigation = document.querySelector(".navigation");
 document.querySelector(".toggle").onclick = function () {
