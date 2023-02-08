@@ -26,3 +26,26 @@ function toggle(){
     let popup = document.querySelector(".popup-video")
     popup.classList.toggle("active")
 }    
+
+/*-----------------------------Contact-----------------------*/
+
+const btn = document.getElementById('button');
+
+document.getElementById('contact-form')
+.addEventListener('submit', function(event) {
+event.preventDefault();
+
+btn.value = 'Sending...';
+
+const serviceID = 'default_service';
+const templateID = 'template_2dvt0rl';
+
+emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+    btn.value = 'Send Email';
+    alert('Sent!');
+    }, (err) => {
+    btn.value = 'Send Email';
+    alert(JSON.stringify(err));
+    });
+});
