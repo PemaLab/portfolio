@@ -1,3 +1,5 @@
+const { Form } = require("react-bootstrap");
+
 /*--------NavBar Menu---------*/
 let navigation = document.querySelector(".navigation");
 document.querySelector(".toggle").onclick = function () {
@@ -48,4 +50,5 @@ emailjs.sendForm(serviceID, templateID, this)
     btn.value = 'Send Email';
     alert(JSON.stringify(err));
     });
+    (reset()); return false;
 });
