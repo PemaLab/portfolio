@@ -49,3 +49,10 @@ emailjs.sendForm(serviceID, templateID, this)
     alert(JSON.stringify(err));
     });
 });
+let btnClear = document.querySelector('button');
+let inputs = document.querySelectorAll('input')
+let messages = document.querySelectorAll('textarea')
+    btnClear.addEventListener('click', () => {
+        inputs.forEach(input => input.value = '');
+        messages.forEach(textarea => textarea.value = '');
+    });
