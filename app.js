@@ -30,10 +30,12 @@ function toggle(){
 /*-----------------------------Contact-----------------------*/
 
 const btn = document.getElementById('button');
+const formToReset = document.getElementById('contact-form');
 
 document.getElementById('contact-form')
 .addEventListener('submit', function(event) {
 event.preventDefault();
+formToReset.reset();
 
 btn.value = 'Sending...';
 
