@@ -508,6 +508,7 @@ nav {
 
 .about-page {
   margin: 0;
+  background-color: rgb(238, 238, 238);
 }
 .about-page-container {
   width: 100%;
@@ -588,10 +589,11 @@ nav {
 }
 .skills {
   width: 100%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
+  background-color: rgb(238, 238, 238);
 }
 .skills img {
   transition: 0.5s ease-in-out;
