@@ -4,6 +4,86 @@
   padding: 0;
   box-sizing: border-box;
 }
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background-color: lime;
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+.fade-in {
+  animation: fade-in linear;
+  animation-timeline: view(0);
+}
+@keyframes fade-in {
+  0% {
+    scale: 0.5;
+    opacity: 0;
+  }
+  30% {
+    scale: 1;
+    opacity: 1;
+  }
+  70% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 0.5;
+    opacity: 0.8;
+  }
+}
+.footer-fade-in {
+  animation: footer-fade-in linear;
+  animation-timeline: view();
+}
+@keyframes footer-fade-in {
+  0% {
+    opacity: 0.5;
+    scale: 0.5;
+  }
+  15% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.text-fade-out {
+  animation: text-fade-out linear forwards;
+  animation-timeline: view();
+  animation-range: 50% 100%;
+}
+@keyframes text-fade-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out linear forwards;
+  animation-timeline: view();
+  animation-range: 50% 100%;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0.8;
+    scale: 0.5;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -106,22 +186,33 @@ nav {
   width: 100%;
   font-family: "Ubuntu:wght@400", sans-serif;
 }
-.intro-word h3 {
+.intro-word span {
   font-size: 35px;
   position: relative;
+  top: 10px;
   padding-bottom: 30px;
   color: rgb(76, 73, 73);
-  animation: waviy 3s infinite;
+  animation: bounce 1s ease-in-out infinite alternate;
 }
-@keyframes waviy {
-  0%,
-  40%,
+@keyframes bounce {
   100% {
-    transform: translateY(0);
+    top: -20px;
   }
-  40% {
-    transform: translateY(-20px);
-  }
+}
+.intro-word h3 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.intro-word h3 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.intro-word h3 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.intro-word h3 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.intro-word h3 span:nth-child(6) {
+  animation-delay: 0.5s;
 }
 .intro-word h1 {
   font-size: 60px;
@@ -130,7 +221,7 @@ nav {
   color: rgb(234, 233, 233);
 }
 .intro-word a {
-  font-size: 20px;
+  font-size: 2vw;
   padding: 20px 35px;
   text-decoration: none;
   border-radius: 50px;
@@ -191,7 +282,7 @@ nav {
   margin-bottom: 40px;
 }
 .about-content a {
-  font-size: 1.5rem;
+  font-size: 2vw;
   border-radius: 50px;
   margin-left: 20px;
   text-decoration: none;
@@ -272,9 +363,11 @@ nav {
   height: auto;
   display: grid;
   gap: 3%;
-  left: 5%;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+  left: 5%;
 }
+
 .works-content-one,
 .works-content-two,
 .works-content-three,
@@ -379,16 +472,6 @@ nav {
   max-width: 50px;
   z-index: 100;
 }
-.reveal {
-  position: relative;
-  transform: translateY(0px);
-  opacity: 0;
-  transition: all 2s ease;
-}
-.reveal.active {
-  transform: translateY(0px);
-  opacity: 1;
-}
 .footer {
   display: flex;
   justify-content: center;
@@ -440,15 +523,16 @@ nav {
 .f-first button {
   font-family: "Ubuntu", sans-serif;
   padding: 5px;
-  background: rgba(220, 137, 134, 0.7);
+  background: rgba(20, 16, 16, 0.7);
   color: #fff;
   border-radius: 10px;
+  border: none;
   cursor: pointer;
   transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 .f-first button:hover {
   color: #fff;
-  box-shadow: inset 140px 0 0 0 rgb(75, 75, 75);
+  box-shadow: inset 140px 0 0 0 rgb(60, 184, 97);
 }
 .f-second {
   display: block;
@@ -572,9 +656,43 @@ nav {
   margin: 20px 0 0 40px;
   line-height: 35px;
 }
-.about-page-text p {
+.about-text span {
+  color: hsla(0, 1%, 17%, 0.2);
+  background-size: 0% 100%;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, black, black);
+  animation: text-reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: 20vh;
+  animation-range-end: 80vh;
+}
+.about-text h1 span {
+  animation-range-start: cover 10vh;
+  animation-range-end: cover 25vh;
+}
+.about-text p span {
+  animation-range-start: cover 15vh;
+  animation-range-end: cover 60vh;
+}
+.skills span {
   font-size: 18px;
-  color: rgb(124, 124, 124);
+  color: hsla(0, 1%, 17%, 0.2);
+  background-size: 0% 100%;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, black, black);
+  animation: text-reveal linear forwards;
+  animation-timeline: view();
+}
+.skills p span {
+  animation-range-start: cover 10vh;
+  animation-range-end: cover 80vh;
+}
+@keyframes text-reveal {
+  to {
+    background-size: 100% 100%;
+  }
 }
 .about-page-image {
   display: flex;
@@ -860,7 +978,6 @@ nav {
   animation-delay: 0s;
   animation-duration: 11s;
 }
-
 @keyframes bganimate {
   0% {
     transform: translateY(-900px) rotate(720deg);
