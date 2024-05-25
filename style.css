@@ -7,7 +7,7 @@
 .scroll-watcher {
   height: 5px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   z-index: 10;
   background-color: #9130eb;
   border-radius: 50px;
@@ -275,7 +275,7 @@ nav {
   padding: 20px;
 }
 .about-content h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   color: rgb(76, 73, 73);
 }
 .about-content p {
