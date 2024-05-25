@@ -269,6 +269,9 @@ nav {
   padding-top: 15%;
   line-height: 2rem;
 }
+.about-text p>span {
+  font-size: 20px;
+}
 .about-content h1,
 .about-content p,
 .about-content a {
